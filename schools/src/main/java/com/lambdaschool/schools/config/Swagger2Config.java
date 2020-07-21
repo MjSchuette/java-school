@@ -32,7 +32,7 @@ public class Swagger2Config
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(RequestHandlerSelectors
-                        .basePackage("com.lambdaschool.usermodel"))
+                        .basePackage("com.lambdaschool.schools"))
                 .paths(PathSelectors.regex("/.*"))
                 .build()
                 .apiInfo(apiEndPointsInfo());
@@ -46,8 +46,8 @@ public class Swagger2Config
     private ApiInfo apiEndPointsInfo()
     {
         return new ApiInfoBuilder().title("User Model Example")
-                .description("User Model Example")
-                .contact(new Contact("John Mitchell",
+                .description("Java School")
+                .contact(new Contact("Matthew Schuette",
                         "http://www.lambdaschool.com",
                         "john@lambdaschool.com"))
                 .license("MIT")
